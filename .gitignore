@@ -1,0 +1,26 @@
+# Entornos virtuales
+venv/
+.venv/
+dev/
+nombre_ambiente/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# VS Code
+.vscode/
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
