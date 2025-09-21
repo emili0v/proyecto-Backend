@@ -1,7 +1,5 @@
 from django.db import models
-import datetime
-
-ahora = datetime.datetime.now
+from django.utils import timezone
 
 # Create your models here.
 
@@ -9,7 +7,7 @@ ahora = datetime.datetime.now
 class Nacionalidad(models.Model):
     pais = models.CharField(max_length=50, null=False)
     nacionalidad = models.CharField(max_length=50, null=False)
-    created_at = models.DateTimeField(default=ahora)
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
 
@@ -19,14 +17,14 @@ class Autor(models.Model):
     nombre = models.CharField(max_length=250, null=False)
     pseudonimo = models.CharField(max_length=50, null=True)
     biografia = models.TextField(null=True)
-    created_at = models.DateTimeField(default=ahora)
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
 
 class Comuna(models.Model):
     codigo_comuna = models.CharField(max_length=5, null=False)
     nombre_comuna = models.CharField(max_length=50, null=False)
-    created_at = models.DateTimeField(default=ahora)
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
 
@@ -36,7 +34,7 @@ class Direccion(models.Model):
     numero = models.CharField(max_length=10, null=False, default='')
     departamento = models.CharField(max_length=10, null=True)
     detalles = models.TextField(null=True)
-    created_at = models.DateTimeField(default=ahora)
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
 
@@ -46,7 +44,7 @@ class Biblioteca(models.Model):
     nombre_biblioteca = models.CharField(max_length=100, null=False)
     web = models.CharField(max_length=255, null=True)
     habilitado = models.BooleanField(default=True)
-    created_at = models.DateTimeField(default=ahora)
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
 
@@ -60,14 +58,14 @@ class Lector(models.Model):
     nombre_lector = models.CharField(max_length=255, null=False)
     correo_lector = models.CharField(max_length=255, null=True)
     habilitado = models.BooleanField(default=True)
-    created_at = models.DateTimeField(default=ahora)
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
 
 class TipoCategoria(models.Model):
     tipo_categoria = models.CharField(max_length=50, null=False)
     habilitado = models.BooleanField(default=True)
-    created_at = models.DateTimeField(default=ahora)
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
 
@@ -77,7 +75,7 @@ class Categoria(models.Model):
     categoria = models.CharField(max_length=100, null=False)
     descripcion = models.CharField(max_length=255, null=True)
     habilitado = models.BooleanField(default=True)
-    created_at = models.DateTimeField(default=ahora)
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
 
@@ -93,7 +91,7 @@ class Libro(models.Model):
     ubicacion = models.CharField(max_length=255, null=False)
     fisico = models.BooleanField(default=True)
     habilitado = models.BooleanField(default=True)
-    created_at = models.DateTimeField(default=ahora)
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
 
 

@@ -13,7 +13,7 @@ router.register(r'lector', views.Lector_ViewSet)
 router.register(r'tipo_categoria', views.TipoCategoria_ViewSet)
 router.register(r'categoria', views.Categoria_ViewSet)
 router.register(r'libro', views.Libro_ViewSet)
-router.register(r'comunas', views.Prestamo_ViewSet)
+router.register(r'prestamo', views.Prestamo_ViewSet)
 
 
 urlpatterns = [
