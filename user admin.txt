@@ -1,0 +1,7 @@
+user: admin
+pssw: Marshall3%
+
+
+crear home, vistas, serialiser
+
+modificando archivo vista ( de la app ) y url (de django)
